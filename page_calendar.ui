@@ -23,15 +23,12 @@
     QLabel {
         background: transparent;
     }
-    /* Header Area styling */
     #labelTitle {
         color: #cdd6f4;
     }
     #labelSubtitle {
         color: #a6adc8;
     }
-
-    /* Navigation Bar Container */
     #navContainer {
         background-color: #11111b;
         border: 1px solid #313244;
@@ -51,121 +48,171 @@
         color: #cdd6f4;
         font-weight: bold;
     }
-
-    /* Column Container Framing */
-    .QFrame[objectName^="col"] {
+    .QFrame[objectName^=&quot;col&quot;] {
         border-right: 1px solid #313244;
         background-color: transparent;
     }
     #colSun {
-        border-right: none; /* Drop last right border line */
+        border-right: none;
     }
     #colTue {
-        background-color: rgba(137, 180, 250, 0.03); /* Subtle active tracking glow tint */
+        background-color: rgba(137, 180, 250, 0.03);
     }
-
-    /* Day Labels Header Area */
-    .QLabel[objectName^="lblDayName"] {
+    .QLabel[objectName^=&quot;lblDayName&quot;] {
         color: #a6adc8;
         font-size: 11px;
         font-weight: bold;
         text-transform: uppercase;
     }
     #lblDayNameTue {
-        color: #89b4fa; /* Accent active track day text */
+        color: #89b4fa;
     }
-    .QLabel[objectName^="lblDayNum"] {
+    .QLabel[objectName^=&quot;lblDayNum&quot;] {
         color: #cdd6f4;
         font-size: 18px;
         font-weight: bold;
     }
-
-    /* Active Circle Badge Design for Current Date */
     #lblDayNumTue {
         color: #11111b;
         background-color: #89b4fa;
         border-radius: 14px;
         padding: 2px;
     }
-
-    /* Event Scheduler Cards Layout rules */
-    .QFrame[objectName^="card"] {
+    .QFrame[objectName^=&quot;card&quot;] {
         background-color: #181825;
         border: 1px solid #313244;
         border-radius: 8px;
     }
-    .QFrame[objectName^="card"]:hover {
+    .QFrame[objectName^=&quot;card&quot;]:hover {
         border: 1px solid #45475a;
         background-color: #252538;
     }
-    .QLabel[objectName^="cardTitle"] {
+    .QLabel[objectName^=&quot;cardTitle&quot;] {
         color: #cdd6f4;
         font-weight: bold;
         font-size: 13px;
     }
-    .QLabel[objectName^="cardTime"] {
+    .QLabel[objectName^=&quot;cardTime&quot;] {
         color: #a6adc8;
         font-size: 11px;
     }
-
-    /* Catppuccin Dot Badges Category Codes */
     #dotMath { background-color: #b4befe; border-radius: 4px; }
     #dotPhysics { background-color: #f9e2af; border-radius: 4px; }
     #dotHistory { background-color: #f38ba8; border-radius: 4px; }
     #dotLiterature { background-color: #a6e3a1; border-radius: 4px; }
    </string>
   </property>
-
   <layout class="QVBoxLayout" name="mainLayout">
-   <property name="spacing"><number>20</number></property>
-   <property name="leftMargin"><number>25</number></property>
-   <property name="topMargin"><number>25</number></property>
-   <property name="rightMargin"><number>25</number></property>
-   <property name="bottomMargin"><number>25</number></property>
-
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+    <number>25</number>
+   </property>
+   <property name="topMargin">
+    <number>25</number>
+   </property>
+   <property name="rightMargin">
+    <number>25</number>
+   </property>
+   <property name="bottomMargin">
+    <number>25</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="headerLayout">
      <item>
       <layout class="QVBoxLayout" name="titleTextLayout">
-       <property name="spacing"><number>4</number></property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
        <item>
         <widget class="QLabel" name="labelTitle">
-         <property name="font"><font><pointsize>20</pointsize><bold>true</bold></font></property>
-         <property name="text"><string>Schedule</string></property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Schedule</string>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelSubtitle">
-         <property name="text"><string>Plan your study sessions</string></property>
+         <property name="text">
+          <string>Plan your study sessions</string>
+         </property>
         </widget>
        </item>
       </layout>
      </item>
-     <item><spacer name="headerSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item>
       <widget class="QWidget" name="navContainer" native="true">
        <layout class="QHBoxLayout" name="navLayout">
-        <property name="spacing"><number>15</number></property>
-        <property name="leftMargin"><number>12</number></property>
-        <property name="topMargin"><number>6</number></property>
-        <property name="rightMargin"><number>12</number></property>
-        <property name="bottomMargin"><number>6</number></property>
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <property name="leftMargin">
+         <number>12</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>12</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
         <item>
          <widget class="QPushButton" name="buttonPrevWeek">
-          <property name="maximumSize"><size><width>30</width><height>25</height></size></property>
-          <property name="text"><string>&lt;</string></property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;</string>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="labelDateRange">
-          <property name="text"><string>June 29 – July 5, 2026</string></property>
-          <property name="alignment"><set>Qt::AlignCenter</set></property>
+          <property name="text">
+           <string>June 29 – July 5, 2026</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="buttonNextWeek">
-          <property name="maximumSize"><size><width>30</width><height>25</height></size></property>
-          <property name="text"><string>&gt;</string></property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&gt;</string>
+          </property>
          </widget>
         </item>
        </layout>
@@ -173,251 +220,871 @@
      </item>
     </layout>
    </item>
-
    <item>
     <widget class="QFrame" name="calendarGridFrame">
      <property name="styleSheet">
       <string>#calendarGridFrame { border: 1px solid #313244; border-radius: 12px; background-color: #181825; }</string>
      </property>
      <layout class="QHBoxLayout" name="gridHorizontalLayout">
-      <property name="spacing"><number>0</number></property>
-      <property name="leftMargin"><number>0</number></property>
-      <property name="topMargin"><number>0</number></property>
-      <property name="rightMargin"><number>0</number></property>
-      <property name="bottomMargin"><number>0</number></property>
-
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QFrame" name="colMon">
         <layout class="QVBoxLayout" name="layoutMon">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameMon"><property name="text"><string>Mon</string></property></widget>
-         </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumMon"><property name="text"><string>29</string></property></widget>
-         </item>
-         <item><spacer name="spMonHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
          <item>
-          <widget class="QFrame" name="cardMon1">
-           <layout class="QVBoxLayout" name="lCardMon1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotMath"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleMon1"><property name="text"><string>Math</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeMon1"><property name="text"><string>09:00 – 10:30</string></property></widget></item>
-           </layout>
+          <widget class="QLabel" name="lblDayNameMon">
+           <property name="text">
+            <string>Mon</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="cardMon2">
-           <layout class="QVBoxLayout" name="lCardMon2">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotHistory"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleMon2"><property name="text"><string>History</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeMon2"><property name="text"><string>14:00 – 15:30</string></property></widget></item>
-           </layout>
+          <widget class="QLabel" name="lblDayNumMon">
+           <property name="text">
+            <string>29</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
           </widget>
          </item>
-         <item><spacer name="spMonFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <widget class="QGroupBox" name="schGrpMon">
+           <property name="title">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spMonFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colTue">
         <layout class="QVBoxLayout" name="layoutTue">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameTue"><property name="text"><string>Tue</string></property></widget>
-         </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumTue">
-           <property name="fixedSize"><size><width>28</width><height>28</height></size></property>
-           <property name="text"><string>30</string></property>
-           <property name="alignment"><set>Qt::AlignCenter</set></property>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameTue">
+           <property name="text">
+            <string>Tue</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
           </widget>
          </item>
-         <item><spacer name="spTueHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <spacer name="sTueLeft">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblDayNumTue">
+             <property name="text">
+              <string>30</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="fixedSize" stdset="0">
+              <size>
+               <width>28</width>
+               <height>28</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="sTueRight">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
          <item>
           <widget class="QFrame" name="cardTue1">
            <layout class="QVBoxLayout" name="lCardTue1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotPhysics"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleTue1"><property name="text"><string>Physics</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeTue1"><property name="text"><string>10:00 – 12:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotPhysics" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleTue1">
+                <property name="text">
+                 <string>Physics</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sTue1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeTue1">
+              <property name="text">
+               <string>10:00 – 12:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
          <item>
           <widget class="QFrame" name="cardTue2">
            <layout class="QVBoxLayout" name="lCardTue2">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotLiterature"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleTue2"><property name="text"><string>Literature</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeTue2"><property name="text"><string>15:00 – 16:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotLiterature" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleTue2">
+                <property name="text">
+                 <string>Literature</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sTue2A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeTue2">
+              <property name="text">
+               <string>15:00 – 16:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spTueFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spTueFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colWed">
         <layout class="QVBoxLayout" name="layoutWed">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameWed"><property name="text"><string>Wed</string></property></widget>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameWed">
+           <property name="text">
+            <string>Wed</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumWed"><property name="text"><string>1</string></property></widget>
+         <item>
+          <widget class="QLabel" name="lblDayNumWed">
+           <property name="text">
+            <string>1</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item><spacer name="spWedHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
          <item>
           <widget class="QFrame" name="cardWed1">
            <layout class="QVBoxLayout" name="lCardWed1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotMath"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleWed1"><property name="text"><string>Math</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeWed1"><property name="text"><string>09:00 – 11:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotMath" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleWed1">
+                <property name="text">
+                 <string>Math</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sWed1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeWed1">
+              <property name="text">
+               <string>09:00 – 11:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spWedFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spWedFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colThu">
         <layout class="QVBoxLayout" name="layoutThu">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameThu"><property name="text"><string>Thu</string></property></widget>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameThu">
+           <property name="text">
+            <string>Thu</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumThu"><property name="text"><string>2</string></property></widget>
+         <item>
+          <widget class="QLabel" name="lblDayNumThu">
+           <property name="text">
+            <string>2</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item><spacer name="spThuHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
          <item>
           <widget class="QFrame" name="cardThu1">
            <layout class="QVBoxLayout" name="lCardThu1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotHistory"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleThu1"><property name="text"><string>History</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeThu1"><property name="text"><string>13:00 – 14:30</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotHistory" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleThu1">
+                <property name="text">
+                 <string>History</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sThu1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeThu1">
+              <property name="text">
+               <string>13:00 – 14:30</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
          <item>
           <widget class="QFrame" name="cardThu2">
            <layout class="QVBoxLayout" name="lCardThu2">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotPhysics"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleThu2"><property name="text"><string>Physics</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeThu2"><property name="text"><string>15:00 – 17:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotPhysics" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleThu2">
+                <property name="text">
+                 <string>Physics</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sThu2A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeThu2">
+              <property name="text">
+               <string>15:00 – 17:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spThuFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spThuFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colFri">
         <layout class="QVBoxLayout" name="layoutFri">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameFri"><property name="text"><string>Fri</string></property></widget>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameFri">
+           <property name="text">
+            <string>Fri</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumFri"><property name="text"><string>3</string></property></widget>
+         <item>
+          <widget class="QLabel" name="lblDayNumFri">
+           <property name="text">
+            <string>3</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item><spacer name="spFriHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
          <item>
           <widget class="QFrame" name="cardFri1">
            <layout class="QVBoxLayout" name="lCardFri1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotLiterature"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleFri1"><property name="text"><string>Literature</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeFri1"><property name="text"><string>10:00 – 12:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotLiterature" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleFri1">
+                <property name="text">
+                 <string>Literature</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sFri1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeFri1">
+              <property name="text">
+               <string>10:00 – 12:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spFriFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spFriFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colSat">
         <layout class="QVBoxLayout" name="layoutSat">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameSat"><property name="text"><string>Sat</string></property></widget>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameSat">
+           <property name="text">
+            <string>Sat</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumSat"><property name="text"><string>4</string></property></widget>
+         <item>
+          <widget class="QLabel" name="lblDayNumSat">
+           <property name="text">
+            <string>4</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item><spacer name="spSatHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
          <item>
           <widget class="QFrame" name="cardSat1">
            <layout class="QVBoxLayout" name="lCardSat1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotMath"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleSat1"><property name="text"><string>Math</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeSat1"><property name="text"><string>10:00 – 12:30</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotMath" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleSat1">
+                <property name="text">
+                 <string>Math</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sSat1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeSat1">
+              <property name="text">
+               <string>10:00 – 12:30</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
          <item>
           <widget class="QFrame" name="cardSat2">
            <layout class="QVBoxLayout" name="lCardSat2">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotPhysics"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleSat2"><property name="text"><string>Physics</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeSat2"><property name="text"><string>14:00 – 16:00</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotPhysics" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleSat2">
+                <property name="text">
+                 <string>Physics</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sSat2A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeSat2">
+              <property name="text">
+               <string>14:00 – 16:00</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spSatFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spSatFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
       <item>
        <widget class="QFrame" name="colSun">
         <layout class="QVBoxLayout" name="layoutSun">
-         <property name="spacing"><number>12</number></property>
-         <property name="leftMargin"><number>12</number></property>
-         <property name="topMargin"><number>12</number></property>
-         <property name="rightMargin"><number>12</number></property>
-         <property name="bottomMargin"><number>12</number></property>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNameSun"><property name="text"><string>Sun</string></property></widget>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>12</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <property name="bottomMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblDayNameSun">
+           <property name="text">
+            <string>Sun</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item align="Qt::AlignHCenter">
-          <widget class="QLabel" name="lblDayNumSun"><property name="text"><string>5</string></property></widget>
+         <item>
+          <widget class="QLabel" name="lblDayNumSun">
+           <property name="text">
+            <string>5</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
          </item>
-         <item><spacer name="spSunHead"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>10</height></size></property></spacer></item>
          <item>
           <widget class="QFrame" name="cardSun1">
            <layout class="QVBoxLayout" name="lCardSun1">
-            <item><layout class="QHBoxLayout"><item><widget class="QWidget" name="dotHistory"><property name="fixedSize"><size><width>8</width><height>8</height></size></property></widget></item><item><widget class="QLabel" name="cardTitleSun1"><property name="text"><string>History</string></property></widget></item><item><spacer name="s"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item></layout></item>
-            <item><widget class="QLabel" name="cardTimeSun1"><property name="text"><string>11:00 – 12:30</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QWidget" name="dotHistory" native="true">
+                <property name="fixedSize" stdset="0">
+                 <size>
+                  <width>8</width>
+                  <height>8</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="cardTitleSun1">
+                <property name="text">
+                 <string>History</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="sSun1A">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="cardTimeSun1">
+              <property name="text">
+               <string>11:00 – 12:30</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
-         <item><spacer name="spSunFoot"><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+         <item>
+          <spacer name="spSunFoot">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
       </item>
-
      </layout>
     </widget>
    </item>
