@@ -9,9 +9,10 @@ class page_tasks;
 
 #include <QJsonArray>
 #include <QString>
+#include "util.h"
 
 
-class page_tasks : public QWidget
+class page_tasks : public QWidget, public Tasks
 {
     Q_OBJECT
 
@@ -31,17 +32,14 @@ private slots:
 
     void on_buttonSaveTask_clicked();
 
-    void save_task_to_disk(QString course, QString title, QDate dueDate, QString priority, QString status);
+    void save_task_to_disk(QString course, QString title, QDateTime dueDate, QString priority, QString status);
 
-    void insert_item(QString course, QString title, QDate date, QString priority, QString status, int row);
-
-    void load_from_disk();
+    void insert_item(QString course, QString title, QDateTime date, QString priority, QString status, int row);
 
 private:
     Ui::page_tasks *ui;
     bool is_editing;
     int edit_row;
-    QJsonArray saved_tasks;
 };
 
 #endif // PAGE_TASKS_H

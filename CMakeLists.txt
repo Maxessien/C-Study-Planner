@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         page_calendar.h page_calendar.cpp page_calendar.ui
         page_tasks.h page_tasks.cpp page_tasks.ui
+        util.h
+
 
 
 
